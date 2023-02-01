@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200; 400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200; 400;500;600;700;800;900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,27 +6,36 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 nav {
-  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
+  padding: 0.5rem calc((100vw - 1300px) / 2);
   top: 0;
   z-index: 10;
   border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 #logo {
-  cursor: pointer;
   font-size: 32px;
-  margin-left: 25px;
+  margin-left: 35px;
   font-weight: 900;
+}
+
+#logo > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#logo > a:hover {
+  color: #84da6c;
+  text-decoration: none;
 }
 
 #hamburger-menu {
@@ -37,18 +46,277 @@ nav {
   display: flex;
   font-weight: 500;
   list-style-type: none;
-  margin-right: 25px;
+  margin-right: 78px;
 }
 
 li > a {
   color: rgb(0, 0, 0);
+  font-weight: 600;
   text-decoration: none;
   margin: 0 1rem;
 }
 
+li > a:hover {
+  color: #84da6c;
+}
+
+.home {
+  background-color: #000000;
+  color: #dcdcdc;
+  /* background-image: url('https://marketplace.canva.com/EAE7h2ql-W4/1/0/800w/canva-aura-heart-blurred-gradient-aesthetic-desktop-wallpaper-K65pgzyyBdg.jpg'); */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-container {
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 85vh;
+}
+
+.section-one {
+  /* background-color: rgb(236, 236, 236); */
+  width: 55%;
+  padding: 15% 0 10% 15%;
+}
+
+.section-two {
+  /* background-color: rgb(236, 236, 236); */
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0%;
+}
+img {
+  border: 10px solid #dcdcdc;
+  border-radius: 1px;
+  width: 400px;
+}
+
+.section-one > p {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.landing-h1 {
+  font-size: 76px;
+  font-weight: 300;
+}
+.landing-h2 {
+  font-size: 60px;
+  font-weight: 900;
+}
+.landing-h3 {
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 15px;
+}
+
+#landing-btn {
+  background-color: #84da6c;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  width: 200px;
+  margin: 30px 0;
+}
+
+#landing-btn:hover {
+  background-color: #fbe353;
+  color: #fff;
+}
+
+#landing-btn > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.about-container {
+  height: 50vh;
+  padding: 7% 14%;
+}
+
+.experience-hobbies {
+  height: 70vh;
+  display: flex;
+}
+
+.experience {
+  background-color: #3d3d3d;
+  width: 50%;
+  height: 645px;
+}
+
+.hobbies {
+  background-color: #1b1b1b;
+  width: 50%;
+  height: 645px;
+}
+
+.about-h1 {
+  color: #84da6c;
+  font-size: 45px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.top-about > p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.e-h-h1 {
+  color: #fff;
+  text-align: center;
+  padding: 3% 7%;
+}
+
+.contact-container {
+  height: 80vh;
+  text-align: center;
+  color: #fff;
+  height: 83vh;
+}
+
+.contact-container > h1 {
+  padding-top: 50px;
+  font-size: 55px;
+}
+
+.contact-container > h3 {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+
+.top {
+  display: flex;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  text-align: left;
+  position: relative;
+  right: 20px;
+}
+
+.input {
+  height: 45px;
+  margin: 5px 0;
+  font-size: 14px;
+  padding: 2%;
+  border: none;
+  background-color: #efefef;
+  margin-bottom: 20px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  text-align: left;
+  position: relative;
+  left: 20px;
+}
+
+.message {
+  text-align: left;
+}
+
+textarea {
+  border: none;
+  display: block;
+  /* margin: 5px auto; */
+  width: 700px;
+  font-size: 14px;
+  background-color: #efefef;
+  font-family: 'Inter', sans-serif;
+  padding: 1%;
+  margin-top: 8px;
+}
+
+#submit {
+  cursor: pointer;
+  height: 50px;
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  background-color: #84da6c;
+  margin-top: 20px;
+}
+
+#submit:hover {
+  background-color: #fbe353;
+}
+
+footer {
+  border-top: 5px solid #fb78cd;
+  background-color: #000000;
+  color: #fff;
+  height: 5rem;
+}
+
+footer > p {
+  text-align: center;
+  padding-top: 20px;
+}
+
 @media screen and (max-width: 960px) {
-  nav {
-    transition: 0.8s all ease;
+  img {
+    width: 270px;
+  }
+
+  .section-one {
+    padding: 25% 5%;
+  }
+
+  .section-one > p {
+    font-size: 14px;
+  }
+  .landing-h1 {
+    font-size: 70px;
+    font-weight: 300;
+  }
+  .landing-h2 {
+    font-size: 60px;
+  }
+  .landing-h3 {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .section-one {
+    height: 42vh;
+    width: 100%;
+    text-align: center;
+    padding: 8%;
+  }
+
+  .section-two {
+    height: 50vh;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -58,6 +326,7 @@ li > a {
   }
 
   #hamburger-menu {
+    color: #84da6c;
     display: block;
     position: absolute;
     top: 5px;
@@ -65,5 +334,79 @@ li > a {
     transform: translate(-100%, 60%);
     font-size: 1.9rem;
     cursor: pointer;
+  }
+
+  img {
+    width: 240px;
+  }
+
+  .icon {
+    display: inline;
+    font-size: 40px;
+  }
+
+  .section-one {
+    padding: 10%;
+  }
+
+  .section-one > p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .landing-h1 {
+    font-size: 40px;
+  }
+
+  .landing-h2 {
+    font-size: 43px;
+    margin-bottom: 10px;
+  }
+
+  .landing-h3 {
+    font-size: 14px;
+  }
+
+  .about-container {
+    height: 30vh;
+  }
+
+  .about-h1 {
+    font-size: 30px;
+  }
+
+  .top-about > p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .experience {
+    height: 600px;
+    width: 100%;
+  }
+
+  .hobbies {
+    height: 600px;
+    width: 100%;
+  }
+
+  .experience-hobbies {
+    flex-direction: column;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .name {
+    right: 0px;
+  }
+
+  .address {
+    left: 0px;
+  }
+
+  textarea {
+    width: 330px;
   }
 }
