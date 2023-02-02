@@ -328,9 +328,8 @@ textarea {
 
 .resume-container {
   background-color: rgb(0, 0, 0);
-  height: 80vh;
-  border: 2px solid rgb(255, 255, 255);
-  margin: 50px;
+  border: 2px solid rgb(187, 28, 255);
+  margin: 20px;
   box-shadow: 5px 10px;
 }
 
@@ -352,7 +351,6 @@ textarea {
   display: flex;
   height: 400px;
   width: 100%;
-
   padding: 5px;
 }
 
@@ -390,6 +388,20 @@ textarea {
 
 .education-section > p {
   margin-bottom: 15px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+.proj-pic {
+  height: 150px;
+  width: 150px;
+  background-color: #f8ff76;
 }
 
 .resume-h4 {
