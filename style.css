@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200; 400;500;600;700;800;900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +11,7 @@ body {
 }
 
 nav {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -23,13 +24,13 @@ nav {
 }
 
 #logo {
-  font-size: 32px;
+  font-size: 40px;
   margin-left: 35px;
   font-weight: 900;
 }
 
 #logo > a {
-  color: #000000;
+  color: #f3f3f3;
   text-decoration: none;
 }
 
@@ -50,8 +51,8 @@ nav {
 }
 
 li > a {
-  color: rgb(0, 0, 0);
-  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
   text-decoration: none;
   margin: 0 1rem;
 }
@@ -63,7 +64,6 @@ li > a:hover {
 .home {
   background-color: #000000;
   color: #dcdcdc;
-  /* background-image: url('https://marketplace.canva.com/EAE7h2ql-W4/1/0/800w/canva-aura-heart-blurred-gradient-aesthetic-desktop-wallpaper-K65pgzyyBdg.jpg'); */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,23 +77,32 @@ li > a:hover {
 }
 
 .section-one {
-  /* background-color: rgb(236, 236, 236); */
   width: 55%;
   padding: 15% 0 10% 15%;
 }
 
 .section-two {
-  /* background-color: rgb(236, 236, 236); */
   width: 45%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 0%;
 }
-img {
+
+.section-two > img {
   border: 10px solid #dcdcdc;
-  border-radius: 1px;
-  width: 400px;
+  border-radius: 50%;
+  width: 380px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
 
 .section-one > p {
@@ -101,13 +110,38 @@ img {
   font-weight: 200;
   margin-bottom: 15px;
 }
+
 .landing-h1 {
   font-size: 76px;
   font-weight: 300;
 }
+
 .landing-h2 {
+  background: -webkit-linear-gradient(
+    60deg,
+    rgba(255, 173, 30, 1) 0%,
+    rgba(255, 86, 174, 1) 33%,
+    rgba(21, 250, 255, 1) 75%,
+    rgba(203, 255, 21, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
   font-size: 60px;
   font-weight: 900;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .landing-h3 {
   font-size: 20px;
@@ -116,9 +150,9 @@ img {
 }
 
 #landing-btn {
-  background-color: #84da6c;
+  background-color: #000000;
+  border: 2px solid #84da6c;
   border-radius: 30px;
-  border: none;
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
@@ -128,13 +162,12 @@ img {
 }
 
 #landing-btn:hover {
-  background-color: #fbe353;
-  color: #fff;
+  border: 2px solid #fbe353;
 }
 
 #landing-btn > a {
   text-decoration: none;
-  color: #000000;
+  color: #84da6c;
 }
 
 .about-container {
@@ -143,20 +176,32 @@ img {
 }
 
 .experience-hobbies {
-  height: 70vh;
   display: flex;
 }
 
-.experience {
-  background-color: #3d3d3d;
-  width: 50%;
+.experiences {
+  background-color: #fbe353;
+  width: 60%;
   height: 645px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
+.experiences > img {
+  width: 200px;
+  height: 200px;
+  border: none;
+  margin: 3px;
 }
 
 .hobbies {
   background-color: #1b1b1b;
-  width: 50%;
+  width: 40%;
   height: 645px;
+  padding: 3%;
 }
 
 .about-h1 {
@@ -175,6 +220,20 @@ img {
   color: #fff;
   text-align: center;
   padding: 3% 7%;
+}
+
+.hobbies > h2 {
+  font-weight: 500;
+  color: #fbe353;
+}
+
+ul > li {
+  font-weight: 200;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  position: relative;
+  left: 20px;
 }
 
 .contact-container {
@@ -265,9 +324,92 @@ textarea {
   background-color: #fbe353;
 }
 
+/* Experience Styles */
+
+.resume-container {
+  background-color: rgb(0, 0, 0);
+  height: 80vh;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 50px;
+  box-shadow: 5px 10px;
+}
+
+.info-container {
+  color: rgb(239, 239, 239);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 50px 40px;
+  padding: 5px;
+}
+
+.resume-heading {
+  font-weight: 700;
+  margin: 40px 0 10px 0;
+}
+
+.resume-heading-container {
+  display: flex;
+  height: 400px;
+  width: 100%;
+
+  padding: 5px;
+}
+
+.header-col {
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+}
+
+.info-col {
+  margin: 10px;
+  padding: 10px;
+  width: 420px;
+}
+
+.col2 {
+  margin-left: 20px;
+}
+
+.skill {
+  display: inline-block;
+  outline: 1px solid rgb(227, 0, 163);
+  border-radius: 30px;
+  margin-top: 15px;
+  padding: 22px;
+  height: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: default;
+}
+
+.skill:hover {
+  outline: 1px solid rgb(123, 125, 255);
+}
+
+.education-section > p {
+  margin-bottom: 15px;
+}
+
+.resume-h4 {
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+}
+.company {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.resume-ul > li {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+}
+
+/* Footer Styles */
 footer {
   border-top: 5px solid #fb78cd;
-  background-color: #000000;
+  background-color: #fb78cd;
   color: #fff;
   height: 5rem;
 }
@@ -278,8 +420,8 @@ footer > p {
 }
 
 @media screen and (max-width: 960px) {
-  img {
-    width: 270px;
+  .section-two > img {
+    width: 300px;
   }
 
   .section-one {
@@ -307,7 +449,6 @@ footer > p {
   }
 
   .section-one {
-    height: 42vh;
     width: 100%;
     text-align: center;
     padding: 8%;
@@ -318,6 +459,15 @@ footer > p {
     width: 100%;
     justify-content: center;
   }
+
+  .resume-container {
+    height: 100%;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -325,7 +475,9 @@ footer > p {
     display: none;
   }
 
-  #hamburger-menu {
+  #hamburger-menu,
+  #hamburger-menu::before,
+  #hamburger-menu::after {
     color: #84da6c;
     display: block;
     position: absolute;
@@ -336,8 +488,12 @@ footer > p {
     cursor: pointer;
   }
 
-  img {
-    width: 240px;
+  #hamburger-menu:hover {
+    color: #fbe353;
+  }
+
+  .section-two > img {
+    width: 280px;
   }
 
   .icon {
@@ -380,7 +536,16 @@ footer > p {
     text-align: center;
   }
 
-  .experience {
+  ul > li {
+    font-weight: 200;
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+    position: relative;
+    left: 20px;
+  }
+
+  .experiences {
     height: 600px;
     width: 100%;
   }
